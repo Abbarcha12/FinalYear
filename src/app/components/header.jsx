@@ -1,14 +1,32 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useSpring, animated } from "@react-spring/web";
-
-
+import React, { useContext } from "react";
+import { UserContext } from "@/helpers/userContext";
+import toast, { Toaster } from "react-hot-toast";
 import { AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
 import { useState } from "react";
+import axios from "axios";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  console.log(isLoggedIn)
+  const router = useRouter();
+  const logout = async () => {
+    try {
+      await axios.get("/api/users/logout");
+      setIsLoggedIn(false);
+      toast.success("Logout successful");
+
+      router.push("/");
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
+  };
+
   const [springs, api] = useSpring(() => ({
     from: { x: 10 },
   }));
@@ -24,7 +42,8 @@ const Header = () => {
     setToggle(!toggle);
   };
   return (
-    <header className=''>
+    <header className='container mx-auto'>
+      <Toaster />
       <div className='container mx-auto my-7 '>
         <div className='flex justify-between items-center relative '>
           <Link className=' font-semibold' href='/'>
@@ -66,31 +85,39 @@ const Header = () => {
                     </div>
                   </div>
                   <Link
-                    className='text-[16px] font-[600] text-[#000] p-2'
+                    className='text-[16px] font-[500] text-[#000] p-2'
                     href='/'>
                     Home
                   </Link>
                   <Link
-                    className='text-[16px] font-[600] text-[#000] p-2'
+                    className='text-[16px] font-[500] text-[#000] p-2'
                     href='/about'>
                     About Us
                   </Link>
-                  
+
                   <Link
-                    className='text-[16px] font-[600] text-[#000] p-2'
-                    href='/find'>
+                    className='text-[16px] font-[500] text-[#000] p-2'
+                    href='/findblood'>
                     Find Blood
                   </Link>
                   <Link
-                    className='text-[16px] font-[600] text-[#000] p-2'
+                    className='text-[16px] font-[500] text-[#000] p-2'
                     href='/register'>
-                    Register Now 
+                    Register Now
                   </Link>
-                  <Link
-                    className='text-[16px] font-[600] text-[#000] p-2'
-                    href='/login'>
-                    Log In
-                  </Link>
+                  {isLoggedIn ? (
+                    <button
+                      onClick={logout}
+                      className='text-[16px] font-[500] text-[#000] p-2'>
+                      LogOut
+                    </button>
+                  ) : (
+                    <Link
+                      className='text-[16px] font-[500] text-[#000] p-2'
+                      href='/login'>
+                      Log In
+                    </Link>
+                  )}
                 </div>
               ) : (
                 ""
@@ -99,30 +126,39 @@ const Header = () => {
 
             {/* desktop Header */}
             <div className='hidden sm:block    '>
-              <Link className='text-[18px] font-[600] text-[#000] p-2' href='/'>
+              <Link className='text-[16px] font-[500] text-[#000] p-2' href='/'>
                 Home
               </Link>
               <Link
-                className='text-[18px] font-[600] text-[#000] p-2'
+                className='text-[16px] font-[500] text-[#000] p-2'
                 href='/about'>
                 About Us
               </Link>
               <Link
-                className='text-[18px] font-[600] text-[#000] p-2'
+                className='text-[16px] font-[500] text-[#000] p-2'
                 href='/findblood'>
                 Find Blood
               </Link>
 
               <Link
-                className='text-[18px] font-[600] text-[#000] p-2'
+                className='text-[16px] font-[500] text-[#000] p-2'
                 href='/register'>
                 Register Now
               </Link>
-              <Link
-                className='text-[18px] font-[600] text-[#000] p-2'
-                href='/login'>
-                Log In
-              </Link>
+
+              {isLoggedIn ? (
+                <button
+                  onClick={logout}
+                  className='text-[16px] font-[500] text-[#000] p-2'>
+                  LogOut
+                </button>
+              ) : (
+                <Link
+                  className='text-[16px] font-[500] text-[#000] p-2'
+                  href='/login'>
+                  Log In
+                </Link>
+              )}
             </div>
           </nav>
         </div>
