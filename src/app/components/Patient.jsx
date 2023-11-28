@@ -46,7 +46,7 @@ const Patient = () => {
             Register as Patient
           </h3>
         </div>
-        <div className='w-[95%] mx-auto rounded-lg shadow-lg shadow-[#000]-900 md:p-10 p:5 my-10'>
+        <div className='w-[95%] mx-auto rounded-lg shadow-lg bg-[#fff] shadow-[#000]-900 md:p-10 p:5 my-10'>
           <form onSubmit={handleSubmit(onSubmit)} className='p-5'>
             <div className='  flex flex-wrap justify-between items-center'>
               <div>
@@ -60,7 +60,7 @@ const Patient = () => {
                     {...register("email")}
                     type='email'
                     placeholder='Email'
-                    className='px-3 text-[16px]   w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                    className='px-3 text-[16px] text-[#000]   w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                   />
                 </div>
                 {errors.email && (
@@ -78,7 +78,7 @@ const Patient = () => {
                     {...register("password")}
                     type='password'
                     placeholder='password'
-                    className='px-3 text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                    className='px-3 text-[16px] w-[100%] text-[#000] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                   />
                 </div>
                 {errors.password && (
@@ -90,7 +90,7 @@ const Patient = () => {
             <div className='my-4 flex justify-end '>
               <button
                 type='submit'
-                className=' text-[20px] flex justify-center items-center rounded-lg bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
+                className=' text-[20px] flex justify-center text-[#000] items-center rounded-lg bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
                 Submit
                 <div className='ml-3'>
                   <svg

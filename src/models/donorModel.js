@@ -75,6 +75,11 @@ const DonorSchema = new Schema({
     type: Date,
     required: true,
   },
+  forgotPasswordToken:String,
+  forgotPasswordTokenExpiry:Date,
+  verifyToken:String,
+  verifyTokenExpiry:Date,
+
 });
 
 let Donor;

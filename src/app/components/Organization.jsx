@@ -47,12 +47,12 @@ const router =useRouter()
             Register as Organization
           </h3>
         </div>
-        <div className='w-[90%] mx-auto rounded-lg shadow-lg shadow-[#000]-900 p-5 my-10'>
+        <div className='w-[90%] mx-auto rounded-lg shadow-lg bg-[#fff] shadow-[#000]-900 p-5 my-10'>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label
                 htmlFor='name'
-                class='block mb-2 capitalize font-[400] text-[16px] text-gray-600'>
+                class='block mb-2 capitalize font-[400] text-[16px] textColor'>
                 Organization
               </label>
               <div className='flex flex-col  '>
@@ -60,7 +60,7 @@ const router =useRouter()
                   {...register("organizationName")}
                   type='text'
                   placeholder='Organization Name'
-                  className=' px-3 text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className=' px-3 text-[#000] text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.organizationName && <span className="text-[#ea4c4c]">Required !</span>}
               </div>
@@ -68,7 +68,7 @@ const router =useRouter()
             <div className='mt-7'>
               <label
                 htmlFor='name'
-                class='block mb-2 capitalize font-[400] text-[16px] text-gray-600'>
+                class='block mb-2 capitalize font-[400] text-[16px] textColor'>
                 blood Bank Name
               </label>
               <div className='flex flex-col  '>
@@ -76,7 +76,7 @@ const router =useRouter()
                   {...register("bloodBankName")}
                   type='text'
                   placeholder='Blood Bank Name'
-                  className=' px-3 text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className=' px-3 text-[#000] text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.bloodBankName && <span className="text-[#ea4c4c]">Required !</span>}
               </div>
@@ -84,7 +84,7 @@ const router =useRouter()
             <div>
               <label
                 htmlFor='name'
-                class='block mb-2 mt-2  capitalize font-[400] text-[16px] text-gray-600'>
+                class='block mb-2 mt-2  capitalize font-[400] text-[16px] textColor'>
                 Organization Email
               </label>
               <div className='  '>
@@ -92,7 +92,7 @@ const router =useRouter()
                   {...register("email")}
                   type='email'
                   placeholder='Organizational Email'
-                  className='px-3 text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.email && <span className="text-[#ea4c4c]">Required !</span>}
               </div>
@@ -101,7 +101,7 @@ const router =useRouter()
               <div className=''>
                 <label
                   htmlFor='name'
-                  class='block mb-2 capitalize font-[400] text-[16px] text-gray-600'>
+                  class='block mb-2 capitalize font-[400] text-[16px] textColor'>
                   password
                 </label>
                 
@@ -109,7 +109,7 @@ const router =useRouter()
                     {...register("password")}
                     type='password'
                     placeholder='password'
-                    className='px-3 text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                    className='px-3 text-[#000] text-[16px]  w-[80%] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                   />
                   {errors.password && <span className='text-[#ea4c4c]'>at least 6 characters</span>}
                 
@@ -120,13 +120,13 @@ const router =useRouter()
               <div className=''>
                 <label
                   htmlFor='name'
-                  class='block mb-2 capitalize font-[400] text-[16px] text-gray-600'>
+                  class='block mb-2 capitalize font-[400] text-[16px] textColor'>
                   Address
                 </label>
                 <div className='flex flex-wrap justify-between  '>
                   <textarea
                     {...register("address")}
-                    class=' w-[80%] md:w-[450px] border rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
+                    class=' w-[80%] md:w-[450px] border text-{#000] rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
                 </div>
                 {errors.address && (
                   <span className='text-[#ea4c4c]'>Required !</span>
@@ -135,13 +135,13 @@ const router =useRouter()
               <div className=''>
                 <label
                   htmlFor='name'
-                  class='block mb-2 capitalize font-[400] text-[16px] text-gray-600'>
+                  class='block mb-2 capitalize font-[400] text-[16px] textColor'>
                   mission
                 </label>
                 <div className='flex flex-wrap justify-between  '>
                   <textarea
                     {...register("mission")}
-                    class=' w-[80%] md:w-[450px] border rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
+                    class=' w-[80%] md:w-[450px] border  text-{#000] rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
                 </div>
                 {errors.mission && (
                   <span className='text-[#ea4c4c]'>Required !</span>
@@ -152,7 +152,7 @@ const router =useRouter()
             <div>
               <label
                 htmlFor='name'
-                class='block mb-2 capitalize font-[500] text-[16px] text-gray-600'>
+                class='block mb-2 capitalize font-[500] text-[16px] textColor'>
                 Contact Number
               </label>
               <div className='  '>
@@ -161,7 +161,7 @@ const router =useRouter()
                   type='tel' // Use type="tel" for phone numbers
                   pattern='[0-9]{11}' // Use pattern attribute to enforce 11 digits
                   placeholder='Phone Number'
-                  className='px-3 text-[16px] w-[100%]  border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%]  border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.phoneNumber && (
                   <span className='text-[#ea4c4c] my-2'>
@@ -173,7 +173,7 @@ const router =useRouter()
             <div className='my-4 flex justify-end '>
               <button
                 type="submit"
-                className=' text-[20px] flex justify-center items-center rounded-lg bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
+                className=' text-[20px] flex justify-center items-center rounded-lg text-{#000 bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
                 Submit
                 <div className='ml-3'>
                   <svg

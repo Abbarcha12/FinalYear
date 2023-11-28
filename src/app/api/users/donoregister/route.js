@@ -84,7 +84,7 @@ export async function POST(request) {
 
       const savedDonor = await newDonor.save();
       console.log(savedDonor);
-
+      
       return NextResponse.json({ message: "Donor created successfully", success: true });
     }
   } catch (error) {
@@ -96,29 +96,15 @@ export async function POST(request) {
 }
 
 
-// export async function GET(req,res) {
-//   try {
-//     // Establish database connection (if not already done)
-//     connect();
+export async function GET(req) {  
+  try {
 
-//     const { searchParams } = new URL(req.url);
-//     const query = searchParams.get('query');
-//    const  bloodGroup=query
-//     console.log(bloodGroup)
- 
-
-//     if (!bloodGroup) {
-//       return NextResponse.error({ error: "Blood group is required" });
-//     }
-
-//     const donors = await Donor.find({ bloodGroup });
-
-//     if (!donors || donors.length === 0) {
-//       return NextResponse.error({ error: "No donors found for the given blood group" });
-//     }
-//     return NextResponse.json({ donors }).setStatus(200);
-//   } catch (error) {
-//     console.error("Error searching donors:", error);
-//     return NextResponse.error({ error: "An error occurred while searching donors", details: error.message }).setStatus(402);
-//   }
-// }
+    const searchCity = req.query.q;
+    console.log(searchCity)
+    const donors = await Donor.find({}); // Use lean() for lightweight documents
+    return NextResponse.json({ success: true, data: donors });
+  } catch (error) {
+    console.error('Error fetching donors:', error.message);
+    return NextResponse.json({ error: 'Error fetching donors' }, { status: 500 });
+  }
+}

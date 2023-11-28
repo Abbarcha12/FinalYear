@@ -106,7 +106,7 @@ const Donor = () => {
           Register as Donor
         </h3>
       </div>
-      <div className='w-[95%] mx-auto rounded-lg shadow-lg shadow-[#000]-900 md:p-10 p:5 my-10'>
+      <div className='w-[95%] mx-auto rounded-lg shadow-lg bg-[#fff] shadow-[#000]-900 md:p-10 p:5 my-10'>
         <form onSubmit={handleSubmit(onSubmit)} className='p-5'>
           <div className='flex flex-wrap justify-between'>
             <div className=''>
@@ -120,7 +120,7 @@ const Donor = () => {
                   {...register("name")}
                   type='text'
                   placeholder='Full Name'
-                  className='px-3 text-[16px] w-[100%]   md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%]   md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.name && (
                   <span className='text-[#ea4c4c]'>Required !</span>
@@ -138,7 +138,7 @@ const Donor = () => {
                   {...register("dateOfBirth")}
                   type='date'
                   placeholder='Date of Birth'
-                  className='px-3 text-[16px] w-[100%]   md:w-[450px] border-2  rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%]   md:w-[450px] border-2  rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.dateOfBirth && (
                   <span className='text-[#ea4c4c]'>Required !</span>
@@ -158,7 +158,7 @@ const Donor = () => {
                   {...register("gender")}
                   type='text'
                   placeholder='gender'
-                  className='px-3 text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.gender && (
                   <span className='text-[#ea4c4c]'>Required !</span>
@@ -176,7 +176,7 @@ const Donor = () => {
                   {...register("weight")}
                   type='number'
                   placeholder='weight'
-                  className='px-3 text-[16px]  w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px]  w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.weight && (
                   <span className='text-[#ea4c4c]'>
@@ -198,7 +198,7 @@ const Donor = () => {
                   {...register("email")}
                   type='email'
                   placeholder='Email'
-                  className='px-3 text-[16px]   w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px]   w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
               </div>
               {errors.email && (
@@ -216,7 +216,7 @@ const Donor = () => {
                   {...register("password")}
                   type='password'
                   placeholder='password'
-                  className='px-3 text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
               </div>
               {errors.password && (
@@ -234,7 +234,7 @@ const Donor = () => {
               <div className='flex flex-wrap justify-between  '>
                 <textarea
                   {...register("address")}
-                  class=' w-[100%] md:w-[450px] border rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
+                  className=' w-[100%] text-[#000] md:w-[450px] border rounded-md p-2 h-32 focus:ring focus:ring-[#000]-500 focus:border-[#000]-500'></textarea>
               </div>
               {errors.address && (
                 <span className='text-[#ea4c4c]'>Required! </span>
@@ -251,7 +251,7 @@ const Donor = () => {
                   {...register("age")}
                   type='number'
                   placeholder='Age'
-                  className='px-3 text-[16px]  w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px]  w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
                 {errors.age && (
                   <span className='text-[#ea4c4c]'>
@@ -330,7 +330,7 @@ const Donor = () => {
                   type='tel' // Use type="tel" for phone numbers
                   pattern='[0-9]{11}' // Use pattern attribute to enforce 11 digits
                   placeholder='Phone Number'
-                  className='px-3 text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
               </div>
               {errors.phoneNumber && (
@@ -352,7 +352,7 @@ const Donor = () => {
                   {...register("city")}
                   type='text'
                   placeholder='City'
-                  className='px-3 text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                  className='px-3 text-[#000] text-[16px] w-[100%] md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                 />
               </div>
               {errors?.city && (
@@ -371,7 +371,7 @@ const Donor = () => {
                     {...register("lastDonationDate")}
                     type='date'
                     placeholder='month'
-                    className='px-3 text-[16px] w-[100%]  md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
+                    className='px-3 text-[#000] text-[16px] w-[100%]  md:w-[450px] border-2 my-3 rounded-lg p-1 border-[#DADADA] focus:outline-none active:outline-none'
                   />
                   {errors?.lastDonationDate && (
                     <span className='text-[#ea4c4c]'>Required !</span>
@@ -384,7 +384,7 @@ const Donor = () => {
           <div className='my-4 flex justify-end '>
             <button
               type='submit'
-              className=' text-[20px] flex justify-center items-center rounded-lg bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
+              className=' text-[20px] flex justify-center items-center text-[#000] rounded-lg bg-[#fff] shadow-2xl shadow-[#000]-900 px-7 py-2 border   '>
               Submit
               <div className='ml-3'>
                 <svg

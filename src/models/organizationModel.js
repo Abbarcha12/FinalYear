@@ -46,6 +46,11 @@ const OrganizationSchema = new Schema({
     minlength: 1,
     maxlength: 200,
   },
+  forgotPasswordToken:String,
+  forgotPasswordTokenExpiry:Date,
+  verifyToken:String,
+  verifyTokenExpiry:Date,
+
 });
 
 let Organization;

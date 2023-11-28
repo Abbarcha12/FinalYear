@@ -31,7 +31,7 @@ export default function Home() {
               <h1 className='textColor font-[500] text-[22px]  '>
                 Why Donate Blood?
               </h1>
-              <ul class='list-disc px-5 text-[#3C3C3C] text-[18px] '>
+              <ul class='list-disc px-5 text-[#ffffff] text-[18px] '>
                 <li>One donation can save up to three lives.</li>
                 <li>It&#39;s safe, quick, and easy.</li>
                 <li>
@@ -53,7 +53,7 @@ export default function Home() {
           <h1 className='textColor font-[700] text-[32px]  '>
             Our Mission
           </h1>
-          <p className='text-[#3C3C3C]  mt-3 '>
+          <p className='text-[#ffff]  mt-3 '>
             WebCareCircles is a website that helps people find blood donors
             easily and promotes charitable activities. It makes blood donation
             simple and connects donors with those in need. Charitable
@@ -74,7 +74,7 @@ export default function Home() {
        
         {/* Our Collaborators */}
         <div className='p-5  mt-[90px] w-[100%] '>
-          <h1 className='text-[#3C3C3C] font-[700] text-[36px]  '>
+          <h1 className='text-[#ffff] font-[700] text-[36px]  '>
             Our Collaborators
           </h1>
           <div className=''>
@@ -85,7 +85,7 @@ export default function Home() {
         {/* How to Get Blood section */}
         <div>
           <div className='p-5  mt-[90px] w-[100%]'>
-            <h1 className='text-[#3C3C3C] font-[700] text-[28px]  md:text-[36px] '>
+            <h1 className='text-[#fff] font-[700] text-[28px]  md:text-[36px] '>
               How to get Blood?
             </h1>
             <div className='container mx-auto mt-[10%]'>
@@ -93,7 +93,7 @@ export default function Home() {
                 <div className=''>
                   <div className='rounded-full flex  flex-col  justify-center items-center   border border-indigo-[#B32346] bg-white shadow-lg w-[250px] h-[250px]'>
                     <div>
-                      <h3 className='text-[#3C3C3C] font-[700] text-[20px] '>
+                      <h3 className='text-[#fff] font-[700] text-[20px] '>
                         Register
                       </h3>
                     </div>
